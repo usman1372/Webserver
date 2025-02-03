@@ -2,7 +2,8 @@ const http = require("http");
 const fs = require("fs");
 const url = require("url");
 
-const myServer = http.createServer((req, res) => {
+//Http request handler
+function httpRequestHandler(req, res) {
   //Not log this request
   if (req.url === "/favicon.ico") return res.end();
 
@@ -35,9 +36,9 @@ const myServer = http.createServer((req, res) => {
         break;
     }
   });
+}
 
-  //Get request header info
-  //console.log(req.headers);
-});
+//Creat http request
+const myServer = http.createServer(httpRequestHandler);
 
 myServer.listen(8004, () => "Server started!");

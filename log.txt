@@ -2,3 +2,5 @@
 1738290643571: New request received
 1738553426470: /: New request received
 1738553461658: /about: New request received
+1738595606286: GET: /: New request received
+1738595622382: GET: /about: New request received
