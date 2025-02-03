@@ -1,0 +1,26 @@
+{
+  "name": "webserver",
+  "version": "1.0.0",
+  "description": "Node.js webserver",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/usman1372/Webserver.git"
+  },
+  "keywords": [
+    "Nodejs",
+    "webserver"
+  ],
+  "author": "Usman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/usman1372/Webserver/issues"
+  },
+  "homepage": "https://github.com/usman1372/Webserver#readme",
+  "dependencies": {
+    "url": "^0.11.4"
+  }
+}
