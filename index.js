@@ -1,6 +1,24 @@
 const http = require("http");
 const fs = require("fs");
 const url = require("url");
+const express = require("express");
+
+//---Working with express---
+const app = express();
+
+//Create handler in express
+app.get("/", (req, res) => {
+  res.end("Hello on the Home page");
+});
+
+app.get("/about", (req, res) => {
+  res.end("Hello! I am a developer.");
+});
+
+//Create http server using express
+app.listen(8005, () => "Server started!");
+
+//---Working natively in Node.js---
 
 //Http request handler
 function httpRequestHandler(req, res) {
@@ -38,7 +56,6 @@ function httpRequestHandler(req, res) {
   });
 }
 
-//Creat http request
-const myServer = http.createServer(httpRequestHandler);
-
-myServer.listen(8004, () => "Server started!");
+//Create http server nativley
+const nativeServer = http.createServer(httpRequestHandler);
+nativeServer.listen(8004, () => "Server started!");
